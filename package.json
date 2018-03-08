@@ -1,0 +1,32 @@
+{
+  "name": "meridian-sandbox",
+  "author": {
+    "name": "Mee Cha"
+  },
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "postinstall": "npm link @westfield/om-react-components",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "radium": "^0.22.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-scripts": "^1.1.1",
+    "@westfield/om-react-components": "^0.1.21",
+    "@westfield/one-base": "^0.1.22",
+    "@westfield/one-grid": "^0.1.22",
+    "@westfield/one-utilities": "^0.1.22",
+    "node-sass-chokidar": "^1.1.0",
+    "npm-run-all": "^4.1.2"
+  }
+}
